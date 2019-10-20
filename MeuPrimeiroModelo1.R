@@ -1,8 +1,6 @@
 dir.create("JAGS/",showWarnings = FALSE)
 
-model<-"
-model{
-
+model<-"model{
 # Dados vem de uma distribuição normal com media e sd desconhecidos
 for(i in 1:length(meuVec)){
 meuVec[i]~dnorm(media,1/sd^2)

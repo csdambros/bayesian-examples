@@ -1,5 +1,6 @@
+dir.create("JAGS/",showWarnings = FALSE)
 
-model{
+model<-model{
 
 # Dados vem de uma distribuição normal com media e sd desconhecidos
 for(i in 1:length(meuVec)){
@@ -11,3 +12,4 @@ media~dunif(-100,100)
 sd~dunif(0.00001,100)
 }
 
+writeLines(modelo,con = "JAGS/MeuPrimeiroModelo1.jags")
